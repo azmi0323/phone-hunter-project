@@ -20,7 +20,7 @@ const productResult = (products) => {
         const productShow = document.getElementById('product-show');
         const div = document.createElement('div');
         div.classList.add('col');
-        div.innerHTML=`
+        div.innerHTML = `
             <div class="card">
                 <img class="p-5" src="${product.image}" class="card-img-top" alt="...">
                 <div class="card-body p-3">
@@ -34,11 +34,30 @@ const productResult = (products) => {
     });
 }
 
-const productDetails = (details)=>{
-    const url =  `https://openapi.programming-hero.com/api/phone/${details}`;
+// product details function 
+const productDetails = (id) => {
+    const url = `https://openapi.programming-hero.com/api/phone/${id}`;
 
+// fetch single product url 
     fetch(url)
-    .then(res => res.json())
-    .then(data => console.log(data))
+        .then(res => res.json())
+        .then(data => singleProductDetails(data.data))
+}
 
+const singleProductDetails = (details) => {
+    const singleProductDetailsShow = document.getElementById('single-product-show');
+    const div = document.createElement('div');
+    div.classList.add('row');
+    div.innerHTML= `
+        <div class="col-lg-6 d-flex justify-content-center">
+            <img src="${details.image}" class=" rounded-start" alt="...">
+        </div>
+        <div class="col-lg-6 d-flex text-center">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Card title</h5>
+        </div>
+    `
+    singleProductDetailsShow.appendChild(div)
 }
