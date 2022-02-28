@@ -54,10 +54,21 @@ const singleProductDetails = (details) => {
         </div>
         <div class="col-lg-6 d-flex text-center">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h5 class="card-title">Card title</h5>
-                <h5 class="card-title">Card title</h5>
+                <h5 >Name : <span class="fw-bold">${details.name}</span></h5>
+                <h5 >Brand : <span class="fw-bold">${details.brand}</span></h5>
+                <h5 >Storage : <span class="fw-bold">${details.mainFeatures.storage}</span></h5>
+                <h5 >Display Size : <span class="fw-bold">${details.mainFeatures.displaySize}</span></h5>
+                <h5 >Memory : <span class="fw-bold">${details.mainFeatures.memory}</span></h5>
+                <h5 >WLAN : <span class="fw-bold">${details.others.WLAN}</span></h5>
+                <h5 >Bluetooth : <span class="fw-bold">${details.others.Bluetooth}</span></h5>
+                <h5 >GPS : <span class="fw-bold">${details.others.GPS}</span></h5>
+                <h5 >NFC : <span class="fw-bold">${details.others.NFC}</span></h5>
+                <h5 >Radio : <span class="fw-bold">${details.others.Radio}</span></h5>
+                <h5 >USB : <span class="fw-bold">${details.others.USB}</span></h5>
+
+                <h5 >Release Date : <span class="fw-bold">${details.releaseDate}</span></h5>
         </div>
     `
+    // console.log(details.releaseDate)
     singleProductDetailsShow.appendChild(div)
 }
