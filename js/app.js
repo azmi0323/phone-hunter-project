@@ -18,6 +18,7 @@ const searchProduct = () => {
     inputField.value = '';
     // console.log(products)
     document.getElementById('product-show').innerHTML = ''
+    document.getElementById('single-product-show').innerHTML = ''
 }
 
 const productResult = (products) => {
@@ -52,6 +53,7 @@ const productResult = (products) => {
 
 // product details function 
 const productDetails = (id) => {
+    document.getElementById('single-product-show').innerHTML = ''
     const url = `https://openapi.programming-hero.com/api/phone/${id}`;
 
     // fetch single product url 
@@ -61,6 +63,8 @@ const productDetails = (id) => {
 }
 
 const singleProductDetails = (details) => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
     const singleProductDetailsShow = document.getElementById('single-product-show');
     const div = document.createElement('div');
     div.classList.add('row');
