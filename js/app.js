@@ -93,6 +93,7 @@ const singleProductDetails = (details) => {
                     <li class="list-group-item"><p class="mb-0">Radio : <span class="fw-bold text-danger">${details.others?.Radio ? details.others.Radio : 'No data found'}</span></p></li>
                     <li class="list-group-item"><p class="mb-0">USB : <span class="fw-bold text-danger">${details.others?.USB ? details.others.USB : 'No data found'}</span></p></li>
                     <li class="list-group-item"><p class="mb-0">Release Date : <span class="fw-bold text-danger">${details.releaseDate ? details.releaseDate : 'No Release Date Found'}</span></p></li>
+                    <li class="list-group-item"><p class="mb-0">Sensors : <span class="fw-bold text-danger">${details.releaseDate ? details.mainFeatures.sensors: 'No Sensors Data Found'}</span></p></li>
                 </ul>
         </div>
     `
