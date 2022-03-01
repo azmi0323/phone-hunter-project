@@ -6,7 +6,7 @@ const searchProduct = () => {
     const url = `https://openapi.programming-hero.com/api/phones?search=${inputFieldText}`;
     // console.log(url);
     if (!inputFieldText) {
-        document.getElementById('errorBox').innerText = 'fill the box'
+        document.getElementById('errorBox').innerText = 'Please input some valid mobile name...'
     } else {
         document.getElementById('errorBox').innerText = ''
         fetch(url)
@@ -25,7 +25,7 @@ const productResult = (products) => {
     // console.log(products.length === 1)
     const productShow = document.getElementById('product-show');
     if (products.length === 0) {
-        document.getElementById('errorBox').innerText = 'NO data found'
+        document.getElementById('errorBox').innerText = 'No data found. Search something else...'
     } else {
         document.getElementById('errorBox').innerText = ''
         products.forEach((product, number) => {
